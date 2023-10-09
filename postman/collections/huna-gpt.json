@@ -31,6 +31,32 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "test",
+			"id": "efc51796-af8e-4453-aa04-2e47c6a76f20",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{env}}.huna2.com/api/gpt/test",
+					"protocol": "https",
+					"host": [
+						"{{env}}",
+						"huna2",
+						"com"
+					],
+					"path": [
+						"api",
+						"gpt",
+						"test"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"auth": {
@@ -107,7 +133,7 @@
 	],
 	"variable": [
 		{
-			"id": "88227717-9a89-4f17-ac9d-e3de56b89b2a",
+			"id": "3a804e5d-2bda-4fbf-93e8-0e86df3c0154",
 			"key": "clientId",
 			"value": "postman"
 		}
