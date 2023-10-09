@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "d095af56-1bdb-450a-b7c3-76b5f6617d6d",
+		"name": "huna-gpt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "115479-d095af56-1bdb-450a-b7c3-76b5f6617d6d"
+	},
+	"item": [
+		{
+			"name": "health",
+			"id": "c74c7756-0799-4c8c-aca3-9b3992ee008f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{env}}.huna2.com/api/gpt/health",
+					"protocol": "https",
+					"host": [
+						"{{env}}",
+						"huna2",
+						"com"
+					],
+					"path": [
+						"api",
+						"gpt",
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "clientId",
+				"value": "{{clientId}}",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "offline_access email profile openid",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://dex.local.huna2.com/token",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "https://dex.local.huna2.com/auth",
+				"type": "string"
+			},
+			{
+				"key": "useBrowser",
+				"value": true,
+				"type": "boolean"
+			},
+			{
+				"key": "tokenName",
+				"value": "huna access token",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d787e3d8-0dcf-4267-a767-8ef243e12721",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "4d3d9ea2-88f4-40c0-9755-7b4ecc059249",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "88227717-9a89-4f17-ac9d-e3de56b89b2a",
+			"key": "clientId",
+			"value": "postman"
+		}
+	]
+}
