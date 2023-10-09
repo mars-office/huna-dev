@@ -63,6 +63,11 @@
 		"type": "oauth2",
 		"oauth2": [
 			{
+				"key": "useBrowser",
+				"value": true,
+				"type": "boolean"
+			},
+			{
 				"key": "client_authentication",
 				"value": "body",
 				"type": "string"
@@ -103,11 +108,6 @@
 				"type": "string"
 			},
 			{
-				"key": "useBrowser",
-				"value": true,
-				"type": "boolean"
-			},
-			{
 				"key": "tokenName",
 				"value": "huna access token",
 				"type": "string"
@@ -123,7 +123,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "51bb3be4-2414-49c6-91dd-6d6e1ccc8345",
+				"id": "e0210df2-847d-4a8d-a781-74416a6045e8",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -133,7 +133,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "fa1a39e0-039b-4ddf-8e32-f3840de1a4a2",
+				"id": "dbe43f08-0890-435f-a078-a85891abc778",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -143,7 +143,7 @@
 	],
 	"variable": [
 		{
-			"id": "522429cd-296d-4720-a43a-052c3f7fe014",
+			"id": "e1951aa2-5253-4642-9a87-36274c8868fb",
 			"key": "clientId",
 			"value": "postman"
 		}
