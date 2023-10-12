@@ -1,3 +1,3 @@
 #!/bin/bash
-cd ../
+cd ../../
 /usr/bin/g pull
