@@ -1,0 +1,9 @@
+{
+  "id": "9c6f9d6c-a069-42f9-8dff-072a664a1777",
+  "color": "#26a269",
+  "globalContent": {
+    "env": "prod",
+    "dexUrl": "https://dex.huna2.com",
+    "rootUrl": "https://huna2.com"
+  }
+}

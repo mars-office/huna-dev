@@ -1,0 +1,14 @@
+{
+  "settings": [
+    {
+      "authId": "c7851d1e-c674-46be-98c3-0744269f7587",
+      "options": {
+        "rest": {
+          "endpoint": "{{ env.rootUrl }}",
+          "pathParams": [],
+          "disableServerCertificateValidation": true
+        }
+      }
+    }
+  ]
+}

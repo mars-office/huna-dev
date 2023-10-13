@@ -1,0 +1,9 @@
+{
+  "id": "35079d36-16de-4212-a363-a4b2ec4e08a5",
+  "color": "#f8e45c",
+  "globalContent": {
+    "env": "uat",
+    "dexUrl": "https://dex.uat.huna2.com",
+    "rootUrl": "https://uat.huna2.com"
+  }
+}
