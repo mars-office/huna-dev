@@ -6,7 +6,7 @@
         "rest": {
           "endpoint": "{{ env.rootUrl }}",
           "pathParams": [],
-          "disableServerCertificateValidation": true
+          "disableServerCertificateValidation": false
         }
       }
     }
