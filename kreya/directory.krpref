@@ -6,7 +6,9 @@
         "rest": {
           "endpoint": "{{ env.rootUrl }}",
           "pathParams": [],
-          "disableServerCertificateValidation": false
+          "disableServerCertificateValidation": false,
+          "versionPolicy": "exact",
+          "version": "http20"
         }
       }
     }
