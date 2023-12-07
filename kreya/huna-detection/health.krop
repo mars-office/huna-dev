@@ -1,6 +1,6 @@
 {
   "details": {
-    "path": "/api/users/test",
+    "path": "/api/detection/health",
     "method": "GET",
     "pathParams": []
   },

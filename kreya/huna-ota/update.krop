@@ -1,0 +1,15 @@
+{
+  "details": {
+    "path": "/api/ota/update",
+    "method": "GET",
+    "pathParams": []
+  },
+  "requests": [
+    {
+      "contentType": "none"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "rest",
+  "typeHint": "GET"
+}
