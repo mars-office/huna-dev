@@ -1,7 +1,8 @@
 {
   "details": {
     "path": "/api/parkinglots/admin/parkinglots/{id}",
-    "method": "GET",
+    "method": "DELETE",
+    "headers": [],
     "pathParams": [
       {
         "key": "id",
@@ -16,5 +17,5 @@
   ],
   "operationType": "unary",
   "invokerName": "rest",
-  "typeHint": "GET"
+  "typeHint": "DELETE"
 }

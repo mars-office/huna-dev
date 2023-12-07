@@ -1,7 +1,13 @@
 {
   "details": {
     "path": "/api/parkinglots/admin/parkinglots/{id}",
-    "method": "GET",
+    "method": "PUT",
+    "headers": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      }
+    ],
     "pathParams": [
       {
         "key": "id",
@@ -11,10 +17,11 @@
   },
   "requests": [
     {
-      "contentType": "none"
+      "location": "admin parkinglots update-request.json",
+      "contentType": "json"
     }
   ],
   "operationType": "unary",
   "invokerName": "rest",
-  "typeHint": "GET"
+  "typeHint": "PUT"
 }
