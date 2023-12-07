@@ -1,0 +1,25 @@
+{
+  "details": {
+    "path": "/api/parkinglots/admin/parkinglots",
+    "method": "GET",
+    "queryParams": [
+      {
+        "key": "page",
+        "value": "1"
+      },
+      {
+        "key": "elements",
+        "value": "5"
+      }
+    ],
+    "pathParams": []
+  },
+  "requests": [
+    {
+      "contentType": "none"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "rest",
+  "typeHint": "GET"
+}

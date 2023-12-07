@@ -1,0 +1,21 @@
+{
+  "details": {
+    "path": "/api/parkinglots/admin/parkinglots/{id}",
+    "method": "DELETE",
+    "headers": [],
+    "pathParams": [
+      {
+        "key": "id",
+        "value": "657204415e601fec4d6ef765"
+      }
+    ]
+  },
+  "requests": [
+    {
+      "contentType": "none"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "rest",
+  "typeHint": "DELETE"
+}

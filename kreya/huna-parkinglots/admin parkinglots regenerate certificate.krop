@@ -1,0 +1,21 @@
+{
+  "details": {
+    "path": "/api/parkinglots/admin/parkinglots/{id}/regenerate",
+    "method": "PUT",
+    "headers": [],
+    "pathParams": [
+      {
+        "key": "id",
+        "value": "657204142b2f6ac799658af3"
+      }
+    ]
+  },
+  "requests": [
+    {
+      "contentType": "none"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "rest",
+  "typeHint": "PUT"
+}
