@@ -1,8 +1,13 @@
 {
   "details": {
-    "path": "/api/parkinglots/test",
+    "path": "/api/parkinglots/admin/parkinglots/{id}",
     "method": "GET",
-    "pathParams": []
+    "pathParams": [
+      {
+        "key": "id",
+        "value": "00000-00000-000000-00000"
+      }
+    ]
   },
   "requests": [
     {
