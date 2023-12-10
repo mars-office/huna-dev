@@ -4,6 +4,7 @@
   "globalContent": {
     "env": "prod",
     "dexUrl": "https://dex.huna2.com",
-    "rootUrl": "https://huna2.com"
+    "rootUrl": "https://huna2.com",
+    "otaUrl": "https://ota.huna2.com"
   }
 }

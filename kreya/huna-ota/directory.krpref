@@ -1,0 +1,13 @@
+{
+  "settings": [
+    {
+      "resetAuth": true,
+      "options": {
+        "rest": {
+          "endpoint": "{{env.otaUrl }}",
+          "pathParams": []
+        }
+      }
+    }
+  ]
+}

@@ -9,6 +9,7 @@
       "contentType": "none"
     }
   ],
+  "clientCertificateId": "5f891366-599b-4245-88cf-be457d21919a",
   "operationType": "unary",
   "invokerName": "rest",
   "typeHint": "GET"
