@@ -20,12 +20,12 @@
   ],
   "certificates": [
     {
-      "id": "5f891366-599b-4245-88cf-be457d21919a",
-      "name": "huna2 local parkinglot crt",
+      "id": "ae8cbdea-6281-4f4a-a9b5-aee43d164c5f",
+      "name": "huna local parkinglot crt",
       "type": "key-cert-file",
       "options": {
-        "keyPath": "../../../../Downloads/657377eee98a9ef4b9830c44_certificate (1)/client.key",
-        "certPath": "../../../../Downloads/657377eee98a9ef4b9830c44_certificate (1)/client.crt"
+        "keyPath": "../../../../Downloads/caca/client.key",
+        "certPath": "../../../../Downloads/caca/client.crt"
       }
     }
   ]
