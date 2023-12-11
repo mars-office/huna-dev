@@ -2,7 +2,7 @@
   "settings": [
     {
       "resetAuth": true,
-      "clientCertificateId": "ae8cbdea-6281-4f4a-a9b5-aee43d164c5f",
+      "clientCertificateId": "da851801-12dd-478d-be88-b19feb36150f",
       "options": {
         "rest": {
           "endpoint": "{{env.otaUrl }}",
