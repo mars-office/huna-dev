@@ -1,6 +1,6 @@
 {
   "details": {
-    "path": "/api/ota/update",
+    "path": "/api/ota/version",
     "method": "GET",
     "pathParams": []
   },
@@ -9,7 +9,6 @@
       "contentType": "none"
     }
   ],
-  "clientCertificateId": "c64f2ab6-71ab-43d2-ad9f-db7d314a3db8",
   "operationType": "unary",
   "invokerName": "rest",
   "typeHint": "GET"

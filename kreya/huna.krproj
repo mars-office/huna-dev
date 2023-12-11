@@ -27,6 +27,15 @@
         "keyPath": "../../../../Downloads/caca/client.key",
         "certPath": "../../../../Downloads/caca/client.crt"
       }
+    },
+    {
+      "id": "c64f2ab6-71ab-43d2-ad9f-db7d314a3db8",
+      "name": "huna dev parkinglot crt",
+      "type": "key-cert-file",
+      "options": {
+        "keyPath": "../../huna-iot/data/client.key",
+        "certPath": "../../huna-iot/data/client.crt"
+      }
     }
   ]
 }
