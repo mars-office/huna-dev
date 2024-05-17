@@ -257,9 +257,6 @@
 						"disabledSystemHeaders": {}
 					},
 					"request": {
-						"auth": {
-							"type": "noauth"
-						},
 						"method": "GET",
 						"header": [
 							{
@@ -268,7 +265,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{appUrl}}/api/signalr/mainHub?id={{mainHubConnectionToken}}&access_token=",
+							"raw": "{{appUrl}}/api/signalr/mainHub?id={{mainHubConnectionToken}}",
 							"host": [
 								"{{appUrl}}"
 							],
@@ -281,10 +278,6 @@
 								{
 									"key": "id",
 									"value": "{{mainHubConnectionToken}}"
-								},
-								{
-									"key": "access_token",
-									"value": ""
 								}
 							]
 						}
@@ -314,21 +307,18 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "70462a2c-aa93-4bd4-8dd9-12050c7b1134",
+				"id": "6e435865-0c54-45b1-99bd-1c13fa5dafb0",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
-					"console.log(pm.variables);",
-					"console.log(pm.execution)",
-					"let token = pm.request.auth.oauth2.get('accessToken');",
-					"pm.environment.set('accessToken', token);"
+					""
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "7e1f7801-6eeb-454f-a54e-f28f87dda292",
+				"id": "70582376-9a4c-4f4b-baa8-ef6b043f120b",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
