@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "46b6e368-2156-4281-9226-8b3a91157127",
+		"name": "huna",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "30486205-46b6e368-2156-4281-9226-8b3a91157127"
+	},
+	"item": [
+		{
+			"name": "huna-users",
+			"item": [
+				{
+					"name": "health check",
+					"id": "af544f0e-7c50-40f2-9617-9256fa5ce925",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{appUrl}}/api/users/health",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my profile",
+					"id": "db19eb0a-cd5e-46b1-8673-206f9bf9558e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{appUrl}}/api/users/myProfile",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"myProfile"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "05532857-24bf-49a3-a1c4-37ef3458fea3"
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "refreshTokenUrl",
+				"value": "{{dexUrl}}/token",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "openid profile email offline_access",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "ui",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "{{dexUrl}}/token",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "{{dexUrl}}/auth",
+				"type": "string"
+			},
+			{
+				"key": "redirect_uri",
+				"value": "{{appUrl}}/",
+				"type": "string"
+			},
+			{
+				"key": "useBrowser",
+				"value": false,
+				"type": "boolean"
+			},
+			{
+				"key": "grant_type",
+				"value": "authorization_code_with_pkce",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "huna",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ead7ceb5-6f8e-4374-8958-4ab637624765",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "b9a944db-a220-43bd-b990-6bcec49458d4",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
