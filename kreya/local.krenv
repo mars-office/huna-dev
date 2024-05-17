@@ -1,9 +1,0 @@
-{
-  "id": "ac97d919-f919-4876-8389-53c1fe8e66e6",
-  "color": "#a51d2d",
-  "globalContent": {
-    "env": "local",
-    "dexUrl": "https://dex.local.huna2.com",
-    "rootUrl": "https://local.huna2.com"
-  }
-}
