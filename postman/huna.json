@@ -268,7 +268,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{appUrl}}/api/signalr/mainHub?id={{mainHubConnectionToken}}",
+							"raw": "{{appUrl}}/api/signalr/mainHub?id={{mainHubConnectionToken}}&access_token=",
 							"host": [
 								"{{appUrl}}"
 							],
@@ -281,6 +281,10 @@
 								{
 									"key": "id",
 									"value": "{{mainHubConnectionToken}}"
+								},
+								{
+									"key": "access_token",
+									"value": ""
 								}
 							]
 						}
@@ -310,18 +314,19 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "d91e3d88-6aa0-44fe-804b-31dd46c268b8",
+				"id": "1f6a729e-7963-4da0-9ed3-5ebdaab6f0d6",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
-					""
+					"let token = pm.request.auth.oauth2.get('accessToken');",
+					"pm.environment.set('accessToken', token);"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "f5bf102f-cdde-40d0-b5c6-ed7f5937721d",
+				"id": "804ac4c8-5572-4485-8425-df991fc0f47f",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
