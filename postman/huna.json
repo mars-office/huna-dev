@@ -257,6 +257,9 @@
 						"disabledSystemHeaders": {}
 					},
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -265,7 +268,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{appUrl}}/api/signalr/mainHub?id={{mainHubConnectionId}}",
+							"raw": "{{appUrl}}/api/signalr/mainHub?id={{mainHubConnectionToken}}",
 							"host": [
 								"{{appUrl}}"
 							],
@@ -277,7 +280,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "{{mainHubConnectionId}}"
+									"value": "{{mainHubConnectionToken}}"
 								}
 							]
 						}
