@@ -314,10 +314,12 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "1f6a729e-7963-4da0-9ed3-5ebdaab6f0d6",
+				"id": "70462a2c-aa93-4bd4-8dd9-12050c7b1134",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
+					"console.log(pm.variables);",
+					"console.log(pm.execution)",
 					"let token = pm.request.auth.oauth2.get('accessToken');",
 					"pm.environment.set('accessToken', token);"
 				]
@@ -326,7 +328,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "804ac4c8-5572-4485-8425-df991fc0f47f",
+				"id": "7e1f7801-6eeb-454f-a54e-f28f87dda292",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
