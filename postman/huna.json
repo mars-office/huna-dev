@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "cada3861-4572-4dc3-9842-21ca0243db3e",
+		"name": "huna",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "huna-users",
+			"item": [
+				{
+					"name": "health check",
+					"id": "0b363d02-f210-4502-8ca2-4ecc1befc8c7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{appUrl}}/api/users/health"
+					},
+					"response": []
+				},
+				{
+					"name": "my profile",
+					"id": "d71dd390-da31-4f3b-8e7f-904e8b9a78f2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{appUrl}}/api/users/myProfile"
+					},
+					"response": []
+				}
+			],
+			"id": "6e35d0d6-966b-4e40-b021-ca984fc190e3"
+		},
+		{
+			"name": "huna-notifications",
+			"item": [
+				{
+					"name": "health check",
+					"id": "7729197e-69f7-46eb-932f-94249ecabafa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{appUrl}}/api/notifications/health"
+					},
+					"response": []
+				},
+				{
+					"name": "get notifications",
+					"id": "9ff8efb6-4f1f-4429-8e99-e878f6aeafa5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{appUrl}}/api/notifications/notifications?start=0&count=50&sortBy=issuedAt&sortDir=desc",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"api",
+								"notifications",
+								"notifications"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "count",
+									"value": "50"
+								},
+								{
+									"key": "sortBy",
+									"value": "issuedAt"
+								},
+								{
+									"key": "sortDir",
+									"value": "desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get unread notifications count",
+					"id": "92644d45-33ae-4e21-b0c1-31e169a03390",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{appUrl}}/api/notifications/notifications/unread"
+					},
+					"response": []
+				},
+				{
+					"name": "mark notification as read",
+					"id": "f5b9f807-21ff-4fbe-9ba5-17b56c76e6cb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{appUrl}}/api/notifications/notifications/:id",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"api",
+								"notifications",
+								"notifications",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "9e000194-2159-47d0-bcdf-95b93da9630f",
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mark all notifications as read",
+					"id": "19090f74-b6f4-42aa-961e-e211f30b416a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "{{appUrl}}/api/notifications/notifications"
+					},
+					"response": []
+				}
+			],
+			"id": "9130da28-9777-47ff-aeec-6624f6926f18"
+		},
+		{
+			"name": "huna-signalr",
+			"item": [
+				{
+					"name": "health check",
+					"id": "5d919f0e-e03f-472f-a1ff-f3c7a233108f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{appUrl}}/api/signalr/health"
+					},
+					"response": []
+				},
+				{
+					"name": "mainHub negotiate",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "abd7f549-1802-4bd7-b8a8-3a8fb8bf8a1a",
+								"exec": [
+									"pm.collectionVariables.set(\"mainHubConnectionId\", pm.response.json().connectionId);",
+									"pm.collectionVariables.set(\"mainHubConnectionToken\", pm.response.json().connectionToken);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "d249ce59-4805-4ca8-95cc-719e5a2c1c1f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "40bec08c-312e-46e1-a46d-e5a64893f403",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{appUrl}}/api/signalr/mainHub/negotiate?negotiateVersion=1",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"api",
+								"signalr",
+								"mainHub",
+								"negotiate"
+							],
+							"query": [
+								{
+									"key": "negotiateVersion",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "06e72dbe-55e8-4650-ae27-a709ec422cab"
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": {
+			"refreshTokenUrl": "{{dexUrl}}/token",
+			"scope": "openid profile email offline_access",
+			"clientId": "ui",
+			"accessTokenUrl": "{{dexUrl}}/token",
+			"authUrl": "{{dexUrl}}/auth",
+			"redirect_uri": "{{appUrl}}/",
+			"useBrowser": false,
+			"grant_type": "authorization_code_with_pkce",
+			"tokenName": "huna",
+			"addTokenTo": "header"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d91e3d88-6aa0-44fe-804b-31dd46c268b8",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f5bf102f-cdde-40d0-b5c6-ed7f5937721d",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "mainHubConnectionId",
+			"value": "2vlyoZ1J14p0N8T0M1AdTw",
+			"type": "string"
+		},
+		{
+			"key": "mainHubConnectionToken",
+			"value": "H23AdwYgXXgKyya6EtX02w",
+			"type": "string"
+		}
+	]
+}
