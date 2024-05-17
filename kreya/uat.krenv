@@ -4,7 +4,6 @@
   "globalContent": {
     "env": "uat",
     "dexUrl": "https://dex.uat.huna2.com",
-    "rootUrl": "https://uat.huna2.com",
-    "otaUrl": "https://ota.uat.huna2.com"
+    "rootUrl": "https://uat.huna2.com"
   }
 }

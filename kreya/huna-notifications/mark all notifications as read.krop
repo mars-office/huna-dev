@@ -1,0 +1,14 @@
+{
+  "details": {
+    "path": "/api/notifications/mark/all",
+    "method": "PUT"
+  },
+  "requests": [
+    {
+      "contentType": "none"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "rest",
+  "typeHint": "PUT"
+}

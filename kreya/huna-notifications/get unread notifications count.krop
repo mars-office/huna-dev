@@ -1,0 +1,14 @@
+{
+  "details": {
+    "path": "/api/notifications/unread",
+    "method": "GET"
+  },
+  "requests": [
+    {
+      "contentType": "none"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "rest",
+  "typeHint": "GET"
+}
