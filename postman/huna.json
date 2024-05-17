@@ -224,6 +224,53 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "mainHub SSE",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "abd7f549-1802-4bd7-b8a8-3a8fb8bf8a1a",
+								"exec": [
+									"pm.collectionVariables.set(\"mainHubConnectionId\", pm.response.json().connectionId);",
+									"pm.collectionVariables.set(\"mainHubConnectionToken\", pm.response.json().connectionToken);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "d249ce59-4805-4ca8-95cc-719e5a2c1c1f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "cfefe209-6e79-4b76-ae4b-a04eff10190e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{appUrl}}/api/signalr/mainHub/connect"
+					},
+					"response": []
 				}
 			],
 			"id": "06e72dbe-55e8-4650-ae27-a709ec422cab"
