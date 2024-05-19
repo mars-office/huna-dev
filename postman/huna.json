@@ -76,6 +76,28 @@
 					"response": []
 				},
 				{
+					"name": "delete push subscription",
+					"id": "3754c1d1-14d3-49b0-bacc-0990663d0c96",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"json\": \"{\\\"aolo\\\": \\\"test\\\"}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{appUrl}}/api/notifications/pushSubscriptions/delete"
+					},
+					"response": []
+				},
+				{
 					"name": "get notifications",
 					"id": "9ff8efb6-4f1f-4429-8e99-e878f6aeafa5",
 					"protocolProfileBehavior": {
