@@ -54,6 +54,28 @@
 					"response": []
 				},
 				{
+					"name": "add push subscription",
+					"id": "a24ff13a-579e-4660-80f8-dc2c6081e740",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"json\": \"{\\\"aolo\\\": \\\"test\\\"}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{appUrl}}/api/notifications/pushSubscriptions"
+					},
+					"response": []
+				},
+				{
 					"name": "get notifications",
 					"id": "9ff8efb6-4f1f-4429-8e99-e878f6aeafa5",
 					"protocolProfileBehavior": {
