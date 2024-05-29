@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "6a868325-ad45-42fa-99fb-a21253fb9eb3",
+		"name": "huna",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "30486205-6a868325-ad45-42fa-99fb-a21253fb9eb3"
+	},
+	"item": [
+		{
+			"name": "huna-users",
+			"item": [
+				{
+					"name": "health check",
+					"id": "8bd0b671-ef28-4a15-bd3c-b30166c5dd8b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{appUrl}}/api/users/health",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my profile",
+					"id": "f431d26e-1594-4965-aa93-b56bb08f3a47",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{appUrl}}/api/users/myProfile",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"myProfile"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "74aa1641-a359-4704-9f0b-793ac3335861"
+		},
+		{
+			"name": "huna-notifications",
+			"item": [
+				{
+					"name": "health check",
+					"id": "91b3d3fa-d2aa-459a-9941-105e19e5687d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{appUrl}}/api/notifications/health",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"api",
+								"notifications",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get notifications",
+					"id": "9ede79aa-9358-42fd-a110-d3a18e036410",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{appUrl}}/api/notifications/notifications?start=0&count=50&sortBy=issuedAt&sortDir=desc",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"api",
+								"notifications",
+								"notifications"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "count",
+									"value": "50"
+								},
+								{
+									"key": "sortBy",
+									"value": "issuedAt"
+								},
+								{
+									"key": "sortDir",
+									"value": "desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get unread notifications count",
+					"id": "9f0a7cb9-aed3-439a-a590-d99b97682e0a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{appUrl}}/api/notifications/notifications/unread",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"api",
+								"notifications",
+								"notifications",
+								"unread"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mark notification as read",
+					"id": "a0657c40-25f1-4740-a5af-25522c73c43b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{appUrl}}/api/notifications/notifications/:id",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"api",
+								"notifications",
+								"notifications",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mark all notifications as read",
+					"id": "227c3c19-6743-45d3-a31e-bef767715ef9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{appUrl}}/api/notifications/notifications",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"api",
+								"notifications",
+								"notifications"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "dfc044e7-a691-48c7-bd82-1202ac6e7fc5"
+		},
+		{
+			"name": "huna-signalr",
+			"item": [
+				{
+					"name": "health check",
+					"id": "b3b19385-aca8-4bb8-86d8-7d373d7bca24",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{appUrl}}/api/signalr/health",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"api",
+								"signalr",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mainHub negotiate",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4f3598be-59a9-44b8-a9a4-cd578ca7b7a1",
+								"exec": [
+									"pm.collectionVariables.set(\"mainHubConnectionId\", pm.response.json().connectionId);",
+									"pm.collectionVariables.set(\"mainHubConnectionToken\", pm.response.json().connectionToken);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "4a85d546-c1b8-4356-91ce-a5a5f362090d",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "422e1e7f-79ad-40a5-89f4-ae7ce2dcdb86",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{appUrl}}/api/signalr/mainHub/negotiate?negotiateVersion=1",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"api",
+								"signalr",
+								"mainHub",
+								"negotiate"
+							],
+							"query": [
+								{
+									"key": "negotiateVersion",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "09f46995-6a22-4292-a94e-6f535f6d2dcd"
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "refreshTokenUrl",
+				"value": "{{dexUrl}}/token",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "openid profile email offline_access",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "ui",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "{{dexUrl}}/token",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "{{dexUrl}}/auth",
+				"type": "string"
+			},
+			{
+				"key": "redirect_uri",
+				"value": "{{appUrl}}/",
+				"type": "string"
+			},
+			{
+				"key": "useBrowser",
+				"value": false,
+				"type": "boolean"
+			},
+			{
+				"key": "grant_type",
+				"value": "authorization_code_with_pkce",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "huna",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d99a9163-08a0-48b2-b921-5826bd97e57a",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "821f9e99-2374-4d8d-b6e1-a707948d0630",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "43fd6968-b8f2-42bb-8e58-4d425f9a56c4",
+			"key": "mainHubConnectionId",
+			"value": "2vlyoZ1J14p0N8T0M1AdTw",
+			"type": "string"
+		},
+		{
+			"id": "eb368438-37d9-4047-9e32-cffab42fb9c3",
+			"key": "mainHubConnectionToken",
+			"value": "H23AdwYgXXgKyya6EtX02w",
+			"type": "string"
+		}
+	]
+}
