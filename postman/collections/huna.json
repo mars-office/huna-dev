@@ -58,9 +58,9 @@
 													}
 												],
 												"url": {
-													"raw": "{{baseUrl}}/api/notifications/health",
+													"raw": "{{appUrl}}/api/notifications/health",
 													"host": [
-														"{{baseUrl}}"
+														"{{appUrl}}"
 													],
 													"path": [
 														"api",
@@ -132,9 +132,9 @@
 															}
 														],
 														"url": {
-															"raw": "{{baseUrl}}/api/notifications/notifications/unread",
+															"raw": "{{appUrl}}/api/notifications/notifications/unread",
 															"host": [
-																"{{baseUrl}}"
+																"{{appUrl}}"
 															],
 															"path": [
 																"api",
@@ -179,9 +179,9 @@
 													}
 												],
 												"url": {
-													"raw": "{{baseUrl}}/api/notifications/notifications/:id",
+													"raw": "{{appUrl}}/api/notifications/notifications/:id",
 													"host": [
-														"{{baseUrl}}"
+														"{{appUrl}}"
 													],
 													"path": [
 														"api",
@@ -211,9 +211,9 @@
 															}
 														],
 														"url": {
-															"raw": "{{baseUrl}}/api/notifications/notifications/:id",
+															"raw": "{{appUrl}}/api/notifications/notifications/:id",
 															"host": [
-																"{{baseUrl}}"
+																"{{appUrl}}"
 															],
 															"path": [
 																"api",
@@ -260,9 +260,9 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/notifications/notifications?count=50&sortBy=issuedAt&sortDir=desc&start=0",
+											"raw": "{{appUrl}}/api/notifications/notifications?count=50&sortBy=issuedAt&sortDir=desc&start=0",
 											"host": [
-												"{{baseUrl}}"
+												"{{appUrl}}"
 											],
 											"path": [
 												"api",
@@ -302,9 +302,9 @@
 													}
 												],
 												"url": {
-													"raw": "{{baseUrl}}/api/notifications/notifications?count=50&sortBy=issuedAt&sortDir=desc&start=0",
+													"raw": "{{appUrl}}/api/notifications/notifications?count=50&sortBy=issuedAt&sortDir=desc&start=0",
 													"host": [
-														"{{baseUrl}}"
+														"{{appUrl}}"
 													],
 													"path": [
 														"api",
@@ -374,9 +374,9 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseUrl}}/api/notifications/notifications",
+											"raw": "{{appUrl}}/api/notifications/notifications",
 											"host": [
-												"{{baseUrl}}"
+												"{{appUrl}}"
 											],
 											"path": [
 												"api",
@@ -412,9 +412,9 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/api/notifications/notifications",
+													"raw": "{{appUrl}}/api/notifications/notifications",
 													"host": [
-														"{{baseUrl}}"
+														"{{appUrl}}"
 													],
 													"path": [
 														"api",
@@ -461,9 +461,9 @@
 													}
 												],
 												"url": {
-													"raw": "{{baseUrl}}/api/notifications/pushSubscriptions/publicVapidKey",
+													"raw": "{{appUrl}}/api/notifications/pushSubscriptions/publicVapidKey",
 													"host": [
-														"{{baseUrl}}"
+														"{{appUrl}}"
 													],
 													"path": [
 														"api",
@@ -486,9 +486,9 @@
 															}
 														],
 														"url": {
-															"raw": "{{baseUrl}}/api/notifications/pushSubscriptions/publicVapidKey",
+															"raw": "{{appUrl}}/api/notifications/pushSubscriptions/publicVapidKey",
 															"host": [
-																"{{baseUrl}}"
+																"{{appUrl}}"
 															],
 															"path": [
 																"api",
@@ -547,9 +547,9 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/api/notifications/pushSubscriptions/delete",
+													"raw": "{{appUrl}}/api/notifications/pushSubscriptions/delete",
 													"host": [
-														"{{baseUrl}}"
+														"{{appUrl}}"
 													],
 													"path": [
 														"api",
@@ -586,9 +586,9 @@
 															}
 														},
 														"url": {
-															"raw": "{{baseUrl}}/api/notifications/pushSubscriptions/delete",
+															"raw": "{{appUrl}}/api/notifications/pushSubscriptions/delete",
 															"host": [
-																"{{baseUrl}}"
+																"{{appUrl}}"
 															],
 															"path": [
 																"api",
@@ -636,9 +636,9 @@
 															}
 														},
 														"url": {
-															"raw": "{{baseUrl}}/api/notifications/pushSubscriptions/delete",
+															"raw": "{{appUrl}}/api/notifications/pushSubscriptions/delete",
 															"host": [
-																"{{baseUrl}}"
+																"{{appUrl}}"
 															],
 															"path": [
 																"api",
@@ -694,9 +694,9 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseUrl}}/api/notifications/pushSubscriptions",
+											"raw": "{{appUrl}}/api/notifications/pushSubscriptions",
 											"host": [
-												"{{baseUrl}}"
+												"{{appUrl}}"
 											],
 											"path": [
 												"api",
@@ -732,9 +732,9 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/api/notifications/pushSubscriptions",
+													"raw": "{{appUrl}}/api/notifications/pushSubscriptions",
 													"host": [
-														"{{baseUrl}}"
+														"{{appUrl}}"
 													],
 													"path": [
 														"api",
@@ -781,9 +781,9 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/api/notifications/pushSubscriptions",
+													"raw": "{{appUrl}}/api/notifications/pushSubscriptions",
 													"host": [
-														"{{baseUrl}}"
+														"{{appUrl}}"
 													],
 													"path": [
 														"api",
@@ -836,9 +836,9 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/users/health",
+											"raw": "{{appUrl}}/api/users/health",
 											"host": [
-												"{{baseUrl}}"
+												"{{appUrl}}"
 											],
 											"path": [
 												"api",
@@ -860,9 +860,9 @@
 													}
 												],
 												"url": {
-													"raw": "{{baseUrl}}/api/users/health",
+													"raw": "{{appUrl}}/api/users/health",
 													"host": [
-														"{{baseUrl}}"
+														"{{appUrl}}"
 													],
 													"path": [
 														"api",
@@ -906,9 +906,9 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/users/myprofile",
+											"raw": "{{appUrl}}/api/users/myprofile",
 											"host": [
-												"{{baseUrl}}"
+												"{{appUrl}}"
 											],
 											"path": [
 												"api",
@@ -930,9 +930,9 @@
 													}
 												],
 												"url": {
-													"raw": "{{baseUrl}}/api/users/myprofile",
+													"raw": "{{appUrl}}/api/users/myprofile",
 													"host": [
-														"{{baseUrl}}"
+														"{{appUrl}}"
 													],
 													"path": [
 														"api",
@@ -985,9 +985,9 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/signalr/health",
+											"raw": "{{appUrl}}/api/signalr/health",
 											"host": [
-												"{{baseUrl}}"
+												"{{appUrl}}"
 											],
 											"path": [
 												"api",
@@ -1009,9 +1009,9 @@
 													}
 												],
 												"url": {
-													"raw": "{{baseUrl}}/api/signalr/health",
+													"raw": "{{appUrl}}/api/signalr/health",
 													"host": [
-														"{{baseUrl}}"
+														"{{appUrl}}"
 													],
 													"path": [
 														"api",
@@ -1072,9 +1072,9 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/api/signalr/mainHub/negotiate?negotiateVersion=1",
+													"raw": "{{appUrl}}/api/signalr/mainHub/negotiate?negotiateVersion=1",
 													"host": [
-														"{{baseUrl}}"
+														"{{appUrl}}"
 													],
 													"path": [
 														"api",
@@ -1117,9 +1117,9 @@
 															}
 														},
 														"url": {
-															"raw": "{{baseUrl}}/api/signalr/mainHub/negotiate?negotiateVersion=1",
+															"raw": "{{appUrl}}/api/signalr/mainHub/negotiate?negotiateVersion=1",
 															"host": [
-																"{{baseUrl}}"
+																"{{appUrl}}"
 															],
 															"path": [
 																"api",
