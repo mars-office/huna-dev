@@ -325,25 +325,4 @@ components:
   callbacks: {}
 security: []
 servers:
-  - url: 'https://{envPrefix}huna2.com'
-    description: ''
-    variables:
-      envPrefix:
-        description: ''
-        default: dev.
-        enum:
-          - dev.
-          - uat.
-          - local.
-          - ''
-  - url: 'https://dex.{envPrefix}huna2.com'
-    description: ''
-    variables:
-      envPrefix:
-        description: ''
-        default: dev.
-        enum:
-          - dev.
-          - uat.
-          - local.
-          - ''
+  - url: 'https://dev.huna2.com'
