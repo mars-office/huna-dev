@@ -238,7 +238,7 @@ components:
   securitySchemes:
     dexOidc:
       type: openIdConnect
-      openIdConnectUrl: 'https://dex.dev.huna2.com/.well-known/openid-configuration'
+      openIdConnectUrl: 'https://idp.dev.huna2.com/.well-known/openid-configuration'
   schemas:
     Huna.Users.UserClaims:
       properties:
