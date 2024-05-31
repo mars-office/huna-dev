@@ -9,10 +9,12 @@ id = fbd6c79f-d5c4-4aae-9146-127f63c3e32b
 
 [config.relations.collections]
 rootDirectory = postman/collections
-files[] = {"id":"30486205-6a868325-ad45-42fa-99fb-a21253fb9eb3","path":"huna.json","metaData":{}}
 
 [config.relations.collections.metaData]
 
 [config.relations.apiDefinition]
+files[] = {"path":"index.yaml","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
+rootFiles[] = index.yaml
+type = openapi:3

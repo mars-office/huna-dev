@@ -1,0 +1,349 @@
+openapi: 3.0.0
+info:
+  version: '1'
+  title: Huna
+  description: huna API
+  contact: {}
+paths:
+  /api/notifications/health:
+    get:
+      operationId: huna-notifications-health
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          content:
+            text/html:
+              schema:
+                type: string
+  /api/notifications/notifications:
+    get:
+      operationId: huna-notifications-getNotifications
+      description: ''
+      parameters:
+        - in: query
+          name: count
+          schema:
+            type: number
+            default: 50
+        - in: query
+          name: sortBy
+          schema:
+            type: string
+            default: "issuedAt"
+        - in: query
+          name: sortDir
+          schema:
+            type: string
+            default: "desc"
+        - in: query
+          name: start
+          schema:
+            type: number
+            default: 0
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Huna.Notifications.NotificationDto'
+      security:
+        - dexOidc: []
+    put:
+      operationId: huna-notifications-markAllAsRead
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: >-
+                  #/components/schemas/Huna.Notifications.MarkNotificationResponseDto
+      security:
+        - dexOidc: []
+  /api/notifications/notifications/unread:
+    get:
+      operationId: huna-notifications-getUnreadNotificationsCount
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Huna.Notifications.UnreadNotificationsDto'
+      security:
+        - dexOidc: []
+  '/api/notifications/notifications/{id}':
+    get:
+      operationId: huna-notifications-markAsRead
+      description: ''
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: >-
+                  #/components/schemas/Huna.Notifications.MarkNotificationResponseDto
+      security:
+        - dexOidc: []
+  /api/notifications/pushSubscriptions/publicVapidKey:
+    get:
+      operationId: huna-notifications-getPublicVapidKey
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: >-
+                  #/components/schemas/Huna.Notifications.PublicVapidKeyResponseDto
+      security:
+        - dexOidc: []
+  /api/notifications/pushSubscriptions:
+    post:
+      operationId: huna-notifications-addPushSubscription
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Huna.Notifications.AddPushSubscriptionDto'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: >-
+                  #/components/schemas/Huna.Notifications.AddPushSubscriptionResponseDto
+        '400':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: string
+      security:
+        - dexOidc: []
+  /api/notifications/pushSubscriptions/delete:
+    put:
+      operationId: huna-notifications-deletePushSubscription
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: >-
+                #/components/schemas/Huna.Notifications.DeletePushSubscriptionDto
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: >-
+                  #/components/schemas/Huna.Notifications.DeletePushSubscriptionResponseDto
+        '400':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: string
+      security:
+        - dexOidc: []
+  /api/users/health:
+    get:
+      operationId: "huna-users-health"
+      description: ""
+      parameters: []
+      responses:
+        200:
+          description: ""
+          content:
+            text/html:
+              schema:
+                type: "string"
+  /api/users/myprofile:
+    get:
+      operationId: "huna-users-myprofile"
+      description: ""
+      parameters: []
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Huna.Users.UserClaims"
+      security:
+        - dexOidc: []
+  /api/signalr/health:
+    get:
+      operationId: "huna-signalr-health"
+      description: ""
+      parameters: []
+      responses:
+        200:
+          description: ""
+          content:
+            text/html:
+              schema:
+                type: "string"
+  /api/signalr/mainHub/negotiate:
+    post:
+      operationId: "huna-signalr-negotiate"
+      description: ""
+      parameters:
+        - in: "query"
+          name: "negotiateVersion"
+          schema:
+            type: "string"
+            default: "1"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: "string"
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: "string"
+components:
+  securitySchemes:
+    dexOidc:
+      type: openIdConnect
+      openIdConnectUrl: 'https://dex.dev.huna2.com/.well-known/openid-configuration'
+  schemas:
+    Huna.Users.UserClaims:
+      properties:
+        sub:
+          nullable: false
+          type: "string"
+        email:
+          nullable: false
+          type: "string"
+        aud:
+          nullable: false
+          type: "string"
+        email_verified:
+          nullable: false
+          type: "boolean"
+        name:
+          nullable: false
+          type: "string"
+        isAdmin:
+          nullable: false
+          type: "boolean"
+    Huna.Notifications.AddPushSubscriptionDto:
+      properties:
+        json:
+          nullable: false
+          type: string
+    Huna.Notifications.AddPushSubscriptionResponseDto:
+      properties:
+        _id:
+          nullable: false
+          type: string
+    Huna.Notifications.DeletePushSubscriptionDto:
+      properties:
+        json:
+          nullable: false
+          type: string
+    Huna.Notifications.DeletePushSubscriptionResponseDto:
+      properties:
+        _id:
+          nullable: false
+          type: string
+    Huna.Notifications.MarkNotificationResponseDto:
+      properties:
+        affectedCount:
+          nullable: false
+          type: number
+    Huna.Notifications.NotificationDto:
+      properties:
+        _id:
+          nullable: true
+          type: string
+        title:
+          nullable: false
+          type: string
+        message:
+          nullable: false
+          type: string
+        issuedAt:
+          nullable: false
+          type: string
+        readAt:
+          nullable: true
+          type: string
+        severity:
+          nullable: false
+          type: string
+        data:
+          nullable: true
+          type: string
+        url:
+          nullable: true
+          type: string
+    Huna.Notifications.PublicVapidKeyResponseDto:
+      properties:
+        publicVapidKey:
+          nullable: false
+          type: string
+    Huna.Notifications.UnreadNotificationsDto:
+      properties:
+        count:
+          nullable: false
+          type: number
+  links: {}
+  callbacks: {}
+security: []
+servers:
+  - url: 'https://{envPrefix}huna2.com'
+    description: ''
+    variables:
+      envPrefix:
+        description: ''
+        default: dev.
+        enum:
+          - dev.
+          - uat.
+          - local.
+          - ''
+  - url: 'https://dex.{envPrefix}huna2.com'
+    description: ''
+    variables:
+      envPrefix:
+        description: ''
+        default: dev.
+        enum:
+          - dev.
+          - uat.
+          - local.
+          - ''
